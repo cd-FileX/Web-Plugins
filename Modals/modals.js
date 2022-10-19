@@ -53,7 +53,7 @@ function openModal(t, c, id, classes) {
 		}, 125);
 	});
 
-	modal_layer.appendChild(l);
+	modal_layer.appendChild(modal);
 	modal_layer.classList.add('fxm-opening');
 
 	setTimeout(() => {

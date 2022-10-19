@@ -1,0 +1,117 @@
+/* 
+Modal Website Plugin by cd-FileX
+Version 0.0.1 
+Example: https://cd-Filex.github.io/FlexBot/
+*/
+
+/* VARIABLES */
+:root {
+	--fallback-color-opac1: #ffffff3f;
+	--success-color-opac1: #43d84330;
+	--warning-color-opac1: #dbcb2230;
+	--danger-color-opac1: #c81f1f30;
+}
+
+
+/* MODALS OVERLAY */
+#filex-modals.fxm-opening, #filex-modals.fxm-opened {
+    background-color: #00000070;
+    display: flex; justify-content: center; align-items: center;
+}
+
+#filex-modals {
+    z-index: 9999;
+    height: 100%; width: 100%;
+    position: fixed;
+    display: none;
+    transition: background-color 125ms ease-in-out;
+}
+
+/* MODAL */
+.fxm-opening > .fx-modal {
+    transform: scale(1.2);
+    opacity: 0;
+    transition: none;
+}
+
+.fx-modal {
+    background-color: var(--bg2);
+    border-radius: 15px; 
+    max-height: 35%;
+    min-height: 200px;
+    overflow: auto;
+    width: 50%;
+    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px 5px #00000056;
+}
+
+.fxm-closing > .fx-modal {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+#fx-modal-top { /*  Contains Title and Close */
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#fx-modal-title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+    height: auto; max-width: calc(90% - (50px + 50px));
+    background-color: var(--fallback-color-opac1);
+    border-radius: 15px 0 15px 0;
+    margin: 0;
+    padding: 10px 25px;
+}
+
+/*  MODAL FARB OVERWRITES */
+.success-modal-type #fx-modal-title, .success-modal-type code {
+    background-color: var(--success-color-opac1);
+}
+
+.warning-modal-type #fx-modal-title, .warning-modal-type code {
+    background-color: var(--warning-color-opac1);
+}
+
+.danger-modal-type #fx-modal-title, .danger-modal-type code {
+    background-color: var(--danger-color-opac1);
+}
+
+.success-modal-type code {
+    border: 2px solid var(--success-color-opac1);
+}
+
+.warning-modal-type code {
+    border: 2px solid var(--warning-color-opac1);
+}
+
+.danger-modal-type code {
+    border: 2px solid var(--danger-color-opac1);
+}
+
+#fx-modal-close {
+    width: 60px;
+    height: 100%;
+    font-family: Arial;
+    font-size: 50px;
+    display: inline-flex;
+    background-color: var(--danger-color-opac1);
+    border-radius: 0 15px 0 15px;
+    float: right;
+}
+
+#fx-modal-content {
+    font-size: large;
+    float: left;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+}

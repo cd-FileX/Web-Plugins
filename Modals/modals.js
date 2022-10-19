@@ -4,12 +4,14 @@ Version 0.0.1
 Example: https://cd-Filex.github.io/FlexBot/
 */
 
-var modal_layer = document.getElementById('filex-modals');
+var modal_layer;
 
 
 function openModal(t, c, id, classes) {
 	if (document.getElementsByClassName('fx-modal')[0]) document.getElementsByClassName('fx-modal')[0].remove();
 
+	modal_layer = document.getElementById('filex-modals');
+	
 	modal = document.createElement('div');
 	modal.id = id;
 	for (i = 0; i < classes.length; i++) modal.classList.add(classes[i]);

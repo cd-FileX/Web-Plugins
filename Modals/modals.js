@@ -1,7 +1,9 @@
 /* 
 Modal Website Plugin by cd-FileX
-Version 0.0.1 
+Version 1.0.0
 Example: https://cd-Filex.github.io/FlexBot/
+
+Issues: https://github.com/cd-FileX/Web-Plugins/issues
 */
 
 var modal_layer;

@@ -1,6 +1,7 @@
 /* 
-Modal Website Plugin by cd-FileX
+Modals Website Plugin by cd-FileX
 Version 1.0.0
+Licensed under GPL-3.0 license
 Example: https://cd-Filex.github.io/FlexBot/
 
 Issues: https://github.com/cd-FileX/Web-Plugins/issues
